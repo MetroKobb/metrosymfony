@@ -9,5 +9,5 @@
 
 # the "app_lucky_number" route name is not important yet
 app_lucky_number:
-    path: /lucky/number
+    path: /src/Controller/LuckyController.php
     controller: App\Controller\LuckyController::number
