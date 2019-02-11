@@ -4,3 +4,64 @@
 #index:
 #    path: /
 #    defaults: { _controller: 'App\Controller\DefaultController::index' }
+
+# config/routes.yaml
+
+# the "app_lucky_number" route name is not important yet
+app_lucky_number:
+    path: /
+    controller: App\Controller\LuckyController::number
+    
+form_formation:
+    path: /formation/create
+    controller: App\Controller\FormationController::create
+
+form_formations_edit:
+    path: /formation/edit/{id}
+    controller: App\Controller\FormationController::edit
+
+valid_controller:
+    path: /formation/valid
+    controller: App\Controller\FormationController::valid
+    
+    
+    
+form_experience:
+    path: /experience/create
+    controller: App\Controller\ExperienceController::create
+
+form__edit:
+    path: /experience/edit/{id}
+    controller: App\Controller\ExperienceController::edit
+
+valid_controller:
+    path: /experience/valid
+    controller: App\Controller\ExperienceController::valid
+    
+    
+    
+form_competence:
+    path: /competence/create
+    controller: App\Controller\CompetenceController::create
+
+form__edit:
+    path: /competence/edit/{id}
+    controller: App\Controller\CompetenceController::edit
+
+valid_controller:
+    path: /competence/valid
+    controller: App\Controller\CompetenceController::valid
+    
+    
+    
+form_profil:
+    path: /profil/create
+    controller: App\Controller\ProfilController::create
+
+form__edit:
+    path: /profil/edit/{id}
+    controller: App\Controller\ProfilController::edit
+
+valid_controller:
+    path: /profil/valid
+    controller: App\Controller\ProfilController::valid
