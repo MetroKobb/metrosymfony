@@ -14,12 +14,12 @@ form_formation:
     path: /formation/create
     controller: App\Controller\FormationController::create
 
-form_formations_edit:
-    path: /formation/edit/{id}
+form_formation_edit:
+    path: /formation/edit/{$id}
     controller: App\Controller\FormationController::edit
 
-valid_controller:
-    path: /formation/valid
+valid_formation:
+    path: /formation/valid/
     controller: App\Controller\FormationController::valid
     
     
@@ -28,27 +28,27 @@ form_experience:
     path: /experience/create
     controller: App\Controller\ExperienceController::create
 
-form__edit:
+form_experience_edit:
     path: /experience/edit/{id}
     controller: App\Controller\ExperienceController::edit
 
-valid_controller:
+valid_experience:
     path: /experience/valid
     controller: App\Controller\ExperienceController::valid
     
     
     
-form_competence:
-    path: /competence/create
-    controller: App\Controller\CompetenceController::create
+form_competences:
+    path: /competences/create
+    controller: App\Controller\CompetencesController::create
 
-form__edit:
-    path: /competence/edit/{id}
-    controller: App\Controller\CompetenceController::edit
+form_competences_edit:
+    path: /competences/edit/{id}
+    controller: App\Controller\CompetencesController::edit
 
-valid_controller:
-    path: /competence/valid
-    controller: App\Controller\CompetenceController::valid
+valid_competences:
+    path: /competences/valid
+    controller: App\Controller\CompetencesController::valid
     
     
     
@@ -56,10 +56,10 @@ form_profil:
     path: /profil/create
     controller: App\Controller\ProfilController::create
 
-form__edit:
+form_profil_edit:
     path: /profil/edit/{id}
     controller: App\Controller\ProfilController::edit
 
-valid_controller:
+valid_profil:
     path: /profil/valid
     controller: App\Controller\ProfilController::valid

@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+	<h1>Création d'un nouveau profil</h1>
+	
+	{{ form_start(form, {'action': path('valid_profil'),'attr': {'novalidate': 'novalidate' } }) }}
+	{{ form(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+</html> 

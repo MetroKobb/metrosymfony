@@ -1,0 +1,1 @@
+[11-Feb-2019 09:50:37 UTC] PHP Fatal error:  Cannot use App\Entity\ClassMetadata as ClassMetadata because the name is already in use in /home/ubuntu/workspace/my_cv/src/Entity/Formation.php on line 9

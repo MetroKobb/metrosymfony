@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+	<h1>Création d'une nouvelle competence</h1>
+	
+	{{ form_start(form, {'action': path('valid_competences'),'attr': {'novalidate': 'novalidate' } }) }}
+	{{ form(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+</html>
