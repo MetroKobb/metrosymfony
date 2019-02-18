@@ -50,7 +50,7 @@ class ExperienceController extends AbstractController
     public function edit($id)
     {
         $entityManager = $this->getDoctrine()->getManager();
-        $formation = $entityManager->getRepository(Experience::class)->findOneBy(['id' => $id]);
+        $experience = $entityManager->getRepository(Experience::class)->findOneBy(['id' => $id]);
         $form = $this->createForm(ExperienceType::class, $experience);
         return $this->render('experience/create2.html.twig', [
             'entity' => $experience,
@@ -59,6 +59,19 @@ class ExperienceController extends AbstractController
         );
     }
     
+    public function delete($id)
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+        $experience = $entityManager->getRepository(Experience::class)->findOneBy(['id' => $id]);
+        
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->remove($experience);
+            $entityManager->flush();
+        
+
+        return $this->redirectToRoute('app_lucky_number');
+    }
+
 }
 
 

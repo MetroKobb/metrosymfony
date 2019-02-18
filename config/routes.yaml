@@ -15,7 +15,7 @@ form_formation:
     controller: App\Controller\FormationController::create
 
 form_formation_edit:
-    path: /formation/edit/{$id}
+    path: /formation/edit/{id}
     controller: App\Controller\FormationController::edit
 
 valid_formation:
@@ -35,6 +35,10 @@ form_experience_edit:
 valid_experience:
     path: /experience/valid
     controller: App\Controller\ExperienceController::valid
+    
+form_experience_delete:
+    path: /experience/delete/{id}
+    controller: App\Controller\ExperienceController::delete
     
     
     
@@ -63,3 +67,7 @@ form_profil_edit:
 valid_profil:
     path: /profil/valid
     controller: App\Controller\ProfilController::valid
+    
+admin:
+    path: /admin
+    controller: App\Controller\LuckyController::admin

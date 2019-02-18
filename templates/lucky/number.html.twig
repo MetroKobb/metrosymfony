@@ -61,6 +61,7 @@
 		<section>
 			<div class="sectionTitle">
 				<h1> Expériences pros</h1>
+				{% if is_granted('ROLE_ADMIN') %}<a href="{{ path('form_experience') }}">Create New</a>{% endif %}
 			</div>
 			
 			<div class="sectionContent">
@@ -68,7 +69,10 @@
     				<ul>
     				{% for experience in experiences %}
 				<article>
-					<h2> {{ experience.getName() }} </h2>
+					<h2> {{ experience.getName() }} </h2> 
+					{% if is_granted('ROLE_ADMIN') %}<a href="{{ path('form_experience_edit',{'id':experience.getId()}) }}">Edit</a>{% endif %}
+					{% if is_granted('ROLE_ADMIN') %}<a href="{{ path('form_experience_delete',{'id':experience.getId()}) }}">Delete</a>{% endif %}
+					
 					<p class="subDetails"> {{ experience.getPlace() }} {{ experience.getDate()|date("m/d/Y") }} </p>
 					<p> {{ experience.getDescription() }} </p>
 				</article>
@@ -109,6 +113,7 @@
     				{% for formation in formations %}
         			<article>
 						<h2> {{ formation.getName() }} </h2>
+						<a href="{{ path('form_formation_edit',{'id':formation.getId()}) }}">Edit</a>
 						<p class="subDetails"> {{ formation.getPlace() }} {{ formation.getDate()|date("m/d/Y") }} </p>
 						<p> {{ formation.getDescription() }} </p>
 					</article>

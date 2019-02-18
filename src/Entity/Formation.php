@@ -19,6 +19,7 @@ class Formation
     private $id;
 
     /**
+     * @Assert\NotBlank
      * @ORM\Column(type="string", length=255)
      */
     private $name;
@@ -40,10 +41,7 @@ class Formation
      * @ORM\Column(type="string", length=255)
      */
     private $description;
-    /**
-     * @Assert\NotBlank
-     * @ORM\Column(type="string", length=255)
-     */
+    
     
     public function getId(): ?int
     {

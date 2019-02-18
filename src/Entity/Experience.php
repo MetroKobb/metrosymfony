@@ -19,6 +19,7 @@ class Experience
     private $id;
 
     /**
+     * @Assert\NotBlank
      * @ORM\Column(type="string", length=255)
      */
     private $name;
@@ -41,10 +42,6 @@ class Experience
      */
     private $description;
     
-    /**
-     * @Assert\NotBlank
-     * @ORM\Column(type="string", length=255)
-     */
 
     public function getId(): ?int
     {

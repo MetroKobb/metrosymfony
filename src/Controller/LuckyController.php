@@ -11,6 +11,7 @@ use App\Entity\Formation;
 use App\Entity\Experience;
 use App\Entity\Competences;
 use App\Entity\Profil;
+use Symfony\Component\Routing\Annotation\Route;
 
 class LuckyController extends Controller
 {
@@ -82,5 +83,11 @@ class LuckyController extends Controller
         $eManager->persist($form);
         $eManager->flush();
     }
+    
+    public function admin()
+    {
+        return new Response('<html><body>Admin page!</body></html>');
+    }
+
 }
 
