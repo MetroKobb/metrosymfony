@@ -87,6 +87,7 @@ class LuckyController extends Controller
     public function admin()
     {
         return new Response('<html><body>Admin page!</body></html>');
+        return $this->redirectToRoute('index.php');
     }
 
 }

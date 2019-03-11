@@ -33,6 +33,8 @@ p {
 	padding: 25px 35px;
 	border-bottom: 2px solid #cf8a05;
 	background: #ededed;
+	background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+ background-blend-mode: normal, lighten, soft-light;
 }
 
 #name h1 {
@@ -84,6 +86,13 @@ p {
 	color: #444;
 }
 
+#cv {
+	
+	background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+ background-blend-mode: normal, lighten, soft-light;
+}
+
+
 #contactDetails ul li a, a[href^=tel] {
 	color: #444; 
 	text-decoration: none;
@@ -115,6 +124,12 @@ section:last-child {
 .sectionTitle {
 	float: left;
 	width: 25%;
+	color: red;
+}
+
+.sectionTitle h1 {
+	
+	color: red;
 }
 
 .sectionContent {
@@ -204,6 +219,7 @@ section:last-child {
 @media all and (max-width: 480px) {
 	.mainDetails {
 		padding: 15px 15px;
+		background-image: linear-gradient(-90deg, red, yellow);
 	}
 	
 	section {
